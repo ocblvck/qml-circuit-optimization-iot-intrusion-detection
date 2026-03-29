@@ -1,6 +1,6 @@
 # Quantum Circuit Optimization for QML-Based IoT Intrusion Detection
 
-This repository is the archival package for the experiment behind the paper "Circuit Optimization and Noise Robustness of Quantum Kernel Models for IoT Intrusion Detection." It contains the experiment code, the two datasets used in the study, the archived result files from the completed 6-qubit and 10-qubit batches, and the LaTeX source for the manuscript.
+This repository is the archival package for the experiment behind the paper "Circuit Optimization and Noise Robustness of Quantum Kernel Models for IoT Intrusion Detection." It contains the experiment code, the two datasets used in the study, and the archived result files from the completed 6-qubit and 10-qubit batches.
 
 The study asks a narrow question: when kernel-based quantum machine learning models are applied to IoT intrusion detection, how much does circuit optimization change downstream classification performance, noise robustness, and runtime?
 
@@ -13,7 +13,6 @@ The study asks a narrow question: when kernel-based quantum machine learning mod
 - `results/circuit_depth/` contains the 52 archived result artifacts from the completed experiment batches.
 - `results/leakage_checks/` contains the preprocessing leakage check report used to audit the evaluation pipeline.
 - `docs/` contains the runbook and technical guide used during the study.
-- `paper/` contains the manuscript source and the figure assets used in the paper.
 
 ## Repository layout
 
@@ -25,7 +24,6 @@ The study asks a narrow question: when kernel-based quantum machine learning mod
 ├── run_deadline_safe_10q_extension.sh
 ├── data/
 ├── docs/
-├── paper/
 └── results/
 ```
 
@@ -70,10 +68,6 @@ python3 circuit_depth_experiment.py \
   --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv \
   --n_runs 30
 ```
-
-## Manuscript source
-
-The `paper/` directory contains the LaTeX source used for the manuscript, including the figure assets required for compilation. The main file is `paper/qml_circuit_optimization_tqe.tex`.
 
 ## Citation
 

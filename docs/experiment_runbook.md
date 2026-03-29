@@ -38,37 +38,7 @@ python3 circuit_depth_experiment.py \
 
 - `results/circuit_depth/` contains the archived experiment outputs
 - `results/leakage_checks/` contains the preprocessing audit report
-- `paper/` contains the manuscript source and figure files
 
 ## Notes
 
 The repository includes the exact datasets and result files used in the final paper package. The datasets are large and tracked with Git LFS.
-- `cv_results_*.csv`
-- `circuit_metrics_*.csv`
-- `experiment_summary_*.json`
-- `journal_summary_*.txt`
-
-## Runtime Interpretation
-
-The script now reports:
-
-- `avg_kernel_time`
-- `kernel_time_std`
-- `avg_classifier_time`
-- `classifier_time_std`
-- `avg_time`
-- `time_std`
-- `kernel_fraction_of_total`
-- `classifier_fraction_of_total`
-
-This should be used directly in the runtime analysis section of the manuscript.
-
-## Launcher
-
-The aligned launcher is:
-
-```bash
-bash run_full_experiment.sh
-```
-
-It activates the `qiskit` environment and runs the current two-dataset full study.
