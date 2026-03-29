@@ -1,0 +1,69 @@
+{
+  "session_id": "v2_noisy_20260323_114741",
+  "config_tag": "10q_2p5k",
+  "dataset_name": "IoT_Original_Distribution",
+  "dataset_tag": "iot_original_distribution",
+  "num_qubits": "10q",
+  "sample_size": "2p5k",
+  "config": {
+    "n_runs": 10,
+    "k_folds": 5,
+    "random_seeds": [
+      42,
+      123,
+      456,
+      789,
+      1024,
+      2048,
+      3072,
+      4096,
+      5120,
+      6144
+    ],
+    "test_size": 0.3,
+    "noise_simulation": true,
+    "transpile_opt_level": 2
+  },
+  "noise_simulation_enabled": true,
+  "total_models": 0,
+  "total_cv_results": 3,
+  "total_ablations": 0,
+  "noise_params": {
+    "single_qubit_error": 0.001,
+    "two_qubit_error": 0.01,
+    "t1": 50000.0,
+    "t2": 70000.0,
+    "gate_time_1q": 50,
+    "gate_time_2q": 300
+  },
+  "phases_completed": {
+    "phase_1_multi_method": false,
+    "phase_2_optimization_comparison": true,
+    "phase_3_optimization_levels": true,
+    "phase_4_comprehensive_model_noise": true,
+    "phase_5_cross_validation": true
+  },
+  "gpu_info": [
+    {
+      "id": 0,
+      "name": "NVIDIA RTX A6000",
+      "memory_total_gb": 47.98828125,
+      "compute_capability": "8.6"
+    },
+    {
+      "id": 1,
+      "name": "NVIDIA RTX A6000",
+      "memory_total_gb": 47.98828125,
+      "compute_capability": "8.6"
+    },
+    {
+      "id": 2,
+      "name": "NVIDIA RTX A6000",
+      "memory_total_gb": 47.98828125,
+      "compute_capability": "8.6"
+    }
+  ],
+  "datasets_used": [],
+  "successful_models": [],
+  "failed_models": []
+}
