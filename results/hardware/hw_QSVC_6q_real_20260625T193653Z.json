@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "20260625T193653Z",
+  "mode": "real",
+  "backend": "ibm_boston",
+  "dataset": "UNSW_2018_IoT_Botnet_Final_10_Best.csv",
+  "model": "QSVC",
+  "num_qubits": 6,
+  "entanglement": "full",
+  "train_size": 40,
+  "test_size": 20,
+  "shots": 4096,
+  "opt_level": 3,
+  "mitigation": true,
+  "depths": [
+    502
+  ],
+  "total_circuits": 1580,
+  "metrics": {
+    "accuracy": 1.0,
+    "mcc": 1.0,
+    "roc_auc": 1.0
+  },
+  "wall_seconds": 26828.5,
+  "calibration_last_update": "2026-06-25 07:47:43-04:00"
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "20260626T104421Z",
+  "mode": "real",
+  "backend": "ibm_boston",
+  "dataset": "IoT_Original_Distribution.csv",
+  "model": "QVE",
+  "num_qubits": 6,
+  "entanglement": "full",
+  "train_size": 40,
+  "test_size": 20,
+  "shots": 4096,
+  "opt_level": 3,
+  "mitigation": false,
+  "depths": [
+    6,
+    519
+  ],
+  "total_circuits": 3160,
+  "metrics": {
+    "accuracy": 0.75,
+    "mcc": 0.5241424183609591,
+    "roc_auc": 0.9400000000000001
+  },
+  "wall_seconds": 54443.6,
+  "calibration_last_update": "2026-06-25 15:14:38-04:00"
+}

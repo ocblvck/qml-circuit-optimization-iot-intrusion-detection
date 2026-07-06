@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "20260626T180158Z",
+  "mode": "real",
+  "backend": "ibm_boston",
+  "dataset": "UNSW_NB15.csv",
+  "model": "QVE",
+  "num_qubits": 6,
+  "entanglement": "full",
+  "train_size": 40,
+  "test_size": 20,
+  "shots": 4096,
+  "opt_level": 3,
+  "mitigation": false,
+  "depths": [
+    6,
+    433
+  ],
+  "total_circuits": 3160,
+  "metrics": {
+    "accuracy": 0.8,
+    "mcc": 0.6123724356957946,
+    "roc_auc": 0.9199999999999999
+  },
+  "wall_seconds": 8338.7,
+  "calibration_last_update": "2026-06-26 10:55:13-04:00"
+}

@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "20260622T150438Z",
+  "mode": "fake",
+  "backend": "fake_fez",
+  "dataset": "UNSW_2018_IoT_Botnet_Final_10_Best.csv",
+  "model": "QSVC",
+  "num_qubits": 6,
+  "entanglement": "full",
+  "train_size": 40,
+  "test_size": 20,
+  "shots": 4096,
+  "opt_level": 3,
+  "mitigation": false,
+  "depths": [
+    502
+  ],
+  "total_circuits": 1580,
+  "metrics": {
+    "accuracy": 1.0,
+    "mcc": 1.0,
+    "roc_auc": 1.0
+  },
+  "wall_seconds": 229.2
+}

@@ -1,0 +1,3 @@
+dataset,config,circuit_name,method,optimization_time,depth,total_gates,two_qubit_gates,depth_reduction_pct,gate_reduction_pct,two_qubit_reduction_pct,depth_reduction_abs,gate_reduction_abs,two_qubit_reduction_abs,depth_efficiency,num_qubits
+UNSW_NB15,10q_2p5k,ZZ_reps2_baseline,none (baseline),0.0,237,604,474,0.0,0.0,0.0,0,0,0,0.0,10
+UNSW_NB15,10q_2p5k,ZZ_reps2_baseline,qiskit_level3,0.04187750816345215,195,592,372,17.72,1.99,21.52,42,12,102,1002.93,10

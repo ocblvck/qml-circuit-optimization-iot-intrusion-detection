@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "20260622T150043Z",
+  "mode": "fake",
+  "backend": "fake_fez",
+  "dataset": "UNSW_NB15.csv",
+  "model": "QSVC",
+  "num_qubits": 6,
+  "entanglement": "full",
+  "train_size": 40,
+  "test_size": 20,
+  "shots": 4096,
+  "opt_level": 3,
+  "mitigation": false,
+  "depths": [
+    454
+  ],
+  "total_circuits": 1580,
+  "metrics": {
+    "accuracy": 0.75,
+    "mcc": 0.5773502691896257,
+    "roc_auc": 0.83
+  },
+  "wall_seconds": 222.0
+}

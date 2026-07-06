@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "20260622T144258Z",
+  "mode": "ideal",
+  "backend": "statevector",
+  "dataset": "IoT_Original_Distribution.csv",
+  "model": "QVE",
+  "num_qubits": 6,
+  "entanglement": "full",
+  "train_size": 40,
+  "test_size": 20,
+  "shots": 0,
+  "opt_level": 3,
+  "mitigation": false,
+  "depths": [
+    2,
+    49
+  ],
+  "total_circuits": 3160,
+  "metrics": {
+    "accuracy": 0.75,
+    "mcc": 0.5241424183609591,
+    "roc_auc": 0.92
+  },
+  "wall_seconds": 3.5
+}
