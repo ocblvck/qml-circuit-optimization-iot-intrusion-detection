@@ -58,9 +58,9 @@ ALL_SEEDS = [42, 123, 456, 789, 1024, 2048, 3072, 4096, 5120, 6144,
              7168, 8192, 9216, 10240, 11264]
 DEFAULT_C = [0.01, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0, 50.0, 100.0]
 DATASETS = {
-    'IoT': 'IoT_Original_Distribution.csv',
-    'UNSW-2018': 'UNSW_2018_IoT_Botnet_Final_10_Best.csv',
-    'UNSW-NB15': 'UNSW_NB15.csv',
+    'IoT': 'data/IoT_Original_Distribution.csv',
+    'UNSW-2018': 'data/UNSW_2018_IoT_Botnet_Final_10_Best.csv',
+    'UNSW-NB15': 'data/UNSW_NB15.csv',
 }
 
 

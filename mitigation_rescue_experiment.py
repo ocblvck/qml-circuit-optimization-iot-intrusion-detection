@@ -57,9 +57,9 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger("mitigation_rescue")
 
 DATASETS = {
-    'IoT': 'IoT_Original_Distribution.csv',
-    'UNSW-2018': 'UNSW_2018_IoT_Botnet_Final_10_Best.csv',
-    'UNSW-NB15': 'UNSW_NB15.csv',
+    'IoT': 'data/IoT_Original_Distribution.csv',
+    'UNSW-2018': 'data/UNSW_2018_IoT_Botnet_Final_10_Best.csv',
+    'UNSW-NB15': 'data/UNSW_NB15.csv',
 }
 
 

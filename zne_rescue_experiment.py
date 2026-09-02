@@ -56,9 +56,9 @@ if not logger.handlers:
     _h = logging.StreamHandler(); _h.setFormatter(logging.Formatter("%(asctime)s [ZNE] %(message)s", "%H:%M:%S")); logger.addHandler(_h)
 logger.propagate = False
 
-DATASETS = {'IoT': 'IoT_Original_Distribution.csv',
-            'UNSW-2018': 'UNSW_2018_IoT_Botnet_Final_10_Best.csv',
-            'UNSW-NB15': 'UNSW_NB15.csv'}
+DATASETS = {'IoT': 'data/IoT_Original_Distribution.csv',
+            'UNSW-2018': 'data/UNSW_2018_IoT_Botnet_Final_10_Best.csv',
+            'UNSW-NB15': 'data/UNSW_NB15.csv'}
 
 
 def make_backend_and_sampler(fake_name: str, shots: int, seed: int):

@@ -7394,7 +7394,7 @@ def main():
     parser.add_argument('--num_qubits', type=int, default=6, help='Number of qubits (default: 6, matching full experiment configs)')
     parser.add_argument('--sample_size', type=int, default=5000, help='Sample size')
     parser.add_argument('--datasets', type=str, nargs='+', 
-                        default=['IoT_Original_Distribution.csv'],
+                        default=['data/IoT_Original_Distribution.csv'],
                         help='Dataset files')
     parser.add_argument('--k_folds', type=int, default=5, help='K-fold CV splits')
     parser.add_argument('--n_runs', type=int, default=30, help='Number of random seed runs (30+ for statistical significance)')
@@ -7496,12 +7496,24 @@ def main():
     
     # Build dataset list
     datasets = []
+    _here = os.path.dirname(os.path.abspath(__file__))
     for ds in args.datasets:
-        if os.path.exists(ds):
-            name = Path(ds).stem
-            datasets.append((name, ds))
+        # Accept 'data/x.csv' or a bare 'x.csv', and resolve relative to the
+        # repository root so the script works from any working directory.
+        resolved = None
+        for cand in (ds, os.path.join(_here, ds),
+                     os.path.join(_here, 'data', os.path.basename(ds)),
+                     os.path.join(_here, os.path.basename(ds))):
+            if os.path.isfile(cand):
+                resolved = cand
+                break
+        if resolved:
+            name = Path(resolved).stem
+            datasets.append((name, resolved))
         else:
-            logger.warning(f"Dataset not found: {ds}")
+            logger.warning(
+                f"Dataset not found: {ds} (expected in data/; "
+                f"run 'git lfs pull' if it is a Git LFS pointer)")
     
     if not datasets:
         logger.error("No valid datasets found!")

@@ -65,9 +65,9 @@ DEFAULT_SHOTS = [256, 512, 1024, 2048, 4096, 8192]
 ANCHOR_SHOTS = 32768  # high-shot proxy for the shot-free noisy-kernel expectation
 SEEDS = [42, 123, 456]
 DATASETS = {
-    'IoT': 'IoT_Original_Distribution.csv',
-    'UNSW-2018': 'UNSW_2018_IoT_Botnet_Final_10_Best.csv',
-    'UNSW-NB15': 'UNSW_NB15.csv',
+    'IoT': 'data/IoT_Original_Distribution.csv',
+    'UNSW-2018': 'data/UNSW_2018_IoT_Botnet_Final_10_Best.csv',
+    'UNSW-NB15': 'data/UNSW_NB15.csv',
 }
 # QSVC = single ZZ full map (cleanest single-kernel convergence signal).
 MAP = ('ZZ', 2, 'full')

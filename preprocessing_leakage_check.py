@@ -383,7 +383,7 @@ def main():
     parser = argparse.ArgumentParser(description="Check preprocessing leakage from split order.")
     parser.add_argument(
         "--dataset",
-        default="IoT_Original_Distribution.csv",
+        default="data/IoT_Original_Distribution.csv",
         help="Path to the dataset CSV file.",
     )
     parser.add_argument("--num-qubits", type=int, default=10, help="Target feature dimension after PCA.")
