@@ -2,7 +2,7 @@
 # Reduced 10q supplementary extension launcher.
 #
 # Keeps the completed 6q_5k results as the primary study and runs a
-# deadline-safe 10q extension for both datasets.
+# deadline-safe 10q extension for all three datasets.
 
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOG_DIR="logs/deadline_safe_10q_${TIMESTAMP}"
@@ -40,7 +40,7 @@ cd "$ROOT_DIR"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting reduced 10q extension"
 python3 -u circuit_depth_experiment.py \
-    --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv \
+    --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv data/UNSW_NB15.csv \
     --config_specs 10:2500 \
     --n_runs 10 \
     --phase4_models QSVC QVE \

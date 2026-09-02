@@ -41,3 +41,5 @@ paper/*.pdf
 paper/*.synctex.gz
 
 results/circuit_depth/figures/
+# generated figures (regenerate with figures_src/generate_*.py)
+figures_src/figures/

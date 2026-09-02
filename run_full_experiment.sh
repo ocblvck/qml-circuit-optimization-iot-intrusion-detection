@@ -23,6 +23,7 @@ echo ""
 echo "Datasets to run:"
 echo "  - IoT_Original_Distribution.csv"
 echo "  - UNSW_2018_IoT_Botnet_Final_10_Best.csv"
+echo "  - UNSW_NB15.csv"
 echo ""
 echo "Primary batch models: QSVC, QVE, QWE"
 echo "Supplementary extension models: QSVC, QVE"
@@ -46,14 +47,14 @@ cd "$ROOT_DIR"
 # Run the final paper-aligned study sequence.
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting 6q primary batch"
 python3 -u circuit_depth_experiment.py \
-    --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv \
+    --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv data/UNSW_NB15.csv \
     --config_specs 6:5000 \
     --n_runs 30 \
     2>&1 | tee "${LOG_DIR}/primary_6q.log"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting 10q supplementary extension"
 python3 -u circuit_depth_experiment.py \
-    --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv \
+    --datasets data/IoT_Original_Distribution.csv data/UNSW_2018_IoT_Botnet_Final_10_Best.csv data/UNSW_NB15.csv \
     --config_specs 10:2500 \
     --n_runs 10 \
     --phase4_models QSVC QVE \
