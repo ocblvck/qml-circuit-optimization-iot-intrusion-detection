@@ -1,0 +1,6 @@
+{
+  "num_qubits": 6,
+  "zz_reps": 2,
+  "path_policy": "best",
+  "paths": {}
+}

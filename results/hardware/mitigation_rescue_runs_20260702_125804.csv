@@ -1,0 +1,3 @@
+dataset,model,condition,backend,num_qubits,seed,accuracy,mcc
+UNSW-NB15,QSVC,raw,FakeSherbrooke,6,42,0.75,0.5773502691896258
+UNSW-NB15,QSVC,ro_mitigated,FakeSherbrooke,6,42,0.625,0.2581988897471611

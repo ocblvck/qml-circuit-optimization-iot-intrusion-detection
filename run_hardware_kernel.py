@@ -20,7 +20,7 @@ Feature maps mirror the paper exactly:
            validation-accuracy weighting can be added once it is on hardware)
 
 Run (dry run, no QPU time):
-    /home/chibuike/miniconda/envs/qiskit/bin/python run_hardware_kernel.py \
+    python run_hardware_kernel.py \
         --dataset UNSW_2018_IoT_Botnet_Final_10_Best.csv --model QSVC \
         --num-qubits 6 --train-size 40 --test-size 20 --shots 4096
 

@@ -1,0 +1,3 @@
+dataset,shots,n_runs,rel_fro_err_mean,rel_fro_err_ci95,kernel_mae_mean,kernel_mae_ci95,accuracy_mean,accuracy_ci95,mcc_mean,mcc_ci95
+UNSW-NB15,256,1,0.4505318540783483,0.0,0.03719460818446738,0.0,0.75,0.0,0.5773502691896257,0.0
+UNSW-NB15,4096,1,0.4581640765967617,0.0,0.03593441607420407,0.0,0.75,0.0,0.5773502691896257,0.0

@@ -1,0 +1,747 @@
+{
+  "dataset": "IoT_Original_Distribution.csv",
+  "sample_size": 10000,
+  "num_qubits": 10,
+  "test_size": 0.3,
+  "seed": 42,
+  "protocols": {
+    "full_fit_then_split": {
+      "selected_features": 20,
+      "selected_feature_names": [
+        "Src_Port",
+        "Dst_Port",
+        "Flow_Duration",
+        "TotLen_Bwd_Pkts",
+        "Flow_Pkts/s",
+        "Flow_IAT_Mean",
+        "Flow_IAT_Max",
+        "Bwd_IAT_Tot",
+        "Bwd_Header_Len",
+        "Bwd_Pkts/s",
+        "Pkt_Len_Mean",
+        "Pkt_Size_Avg",
+        "Subflow_Bwd_Byts",
+        "Init_Bwd_Win_Byts",
+        "Idle_Mean",
+        "Idle_Max",
+        "Fwd_Bwd_Len_Ratio",
+        "Pkt_Rate",
+        "Cat",
+        "Sub_Cat"
+      ],
+      "pca_variance_retained": 0.9865534901618958,
+      "pca_component_summaries": [
+        {
+          "component": 1,
+          "explained_variance_ratio": 0.5012624859809875,
+          "top_features": [
+            {
+              "feature": "Bwd_IAT_Tot",
+              "loading": 0.35884883999824524,
+              "abs_loading": 0.35884883999824524
+            },
+            {
+              "feature": "Flow_IAT_Mean",
+              "loading": 0.34239810705184937,
+              "abs_loading": 0.34239810705184937
+            },
+            {
+              "feature": "Flow_IAT_Max",
+              "loading": 0.34204545617103577,
+              "abs_loading": 0.34204545617103577
+            },
+            {
+              "feature": "Flow_Duration",
+              "loading": 0.3344995975494385,
+              "abs_loading": 0.3344995975494385
+            },
+            {
+              "feature": "Idle_Max",
+              "loading": 0.32859012484550476,
+              "abs_loading": 0.32859012484550476
+            }
+          ]
+        },
+        {
+          "component": 2,
+          "explained_variance_ratio": 0.23789262771606445,
+          "top_features": [
+            {
+              "feature": "Pkt_Len_Mean",
+              "loading": 0.5506840348243713,
+              "abs_loading": 0.5506840348243713
+            },
+            {
+              "feature": "Pkt_Size_Avg",
+              "loading": 0.517738938331604,
+              "abs_loading": 0.517738938331604
+            },
+            {
+              "feature": "TotLen_Bwd_Pkts",
+              "loading": 0.38365381956100464,
+              "abs_loading": 0.38365381956100464
+            },
+            {
+              "feature": "Subflow_Bwd_Byts",
+              "loading": 0.38365381956100464,
+              "abs_loading": 0.38365381956100464
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": -0.21782825887203217,
+              "abs_loading": 0.21782825887203217
+            }
+          ]
+        },
+        {
+          "component": 3,
+          "explained_variance_ratio": 0.07915060222148895,
+          "top_features": [
+            {
+              "feature": "Dst_Port",
+              "loading": 0.7055773735046387,
+              "abs_loading": 0.7055773735046387
+            },
+            {
+              "feature": "Src_Port",
+              "loading": -0.42707106471061707,
+              "abs_loading": 0.42707106471061707
+            },
+            {
+              "feature": "Cat",
+              "loading": 0.2775776982307434,
+              "abs_loading": 0.2775776982307434
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": 0.2712949216365814,
+              "abs_loading": 0.2712949216365814
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": -0.19135503470897675,
+              "abs_loading": 0.19135503470897675
+            }
+          ]
+        },
+        {
+          "component": 4,
+          "explained_variance_ratio": 0.05487384647130966,
+          "top_features": [
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": 0.754610538482666,
+              "abs_loading": 0.754610538482666
+            },
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.4082738757133484,
+              "abs_loading": 0.4082738757133484
+            },
+            {
+              "feature": "Cat",
+              "loading": 0.25178223848342896,
+              "abs_loading": 0.25178223848342896
+            },
+            {
+              "feature": "Dst_Port",
+              "loading": -0.23174698650836945,
+              "abs_loading": 0.23174698650836945
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": 0.21189427375793457,
+              "abs_loading": 0.21189427375793457
+            }
+          ]
+        },
+        {
+          "component": 5,
+          "explained_variance_ratio": 0.03968901187181473,
+          "top_features": [
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": 0.5911378264427185,
+              "abs_loading": 0.5911378264427185
+            },
+            {
+              "feature": "Bwd_IAT_Tot",
+              "loading": 0.3931821882724762,
+              "abs_loading": 0.3931821882724762
+            },
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.3908770978450775,
+              "abs_loading": 0.3908770978450775
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": 0.3286283612251282,
+              "abs_loading": 0.3286283612251282
+            },
+            {
+              "feature": "Src_Port",
+              "loading": -0.32630735635757446,
+              "abs_loading": 0.32630735635757446
+            }
+          ]
+        },
+        {
+          "component": 6,
+          "explained_variance_ratio": 0.02753807231783867,
+          "top_features": [
+            {
+              "feature": "Sub_Cat",
+              "loading": 0.5046226978302002,
+              "abs_loading": 0.5046226978302002
+            },
+            {
+              "feature": "Src_Port",
+              "loading": 0.45553669333457947,
+              "abs_loading": 0.45553669333457947
+            },
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": -0.39360207319259644,
+              "abs_loading": 0.39360207319259644
+            },
+            {
+              "feature": "Cat",
+              "loading": 0.3470587134361267,
+              "abs_loading": 0.3470587134361267
+            },
+            {
+              "feature": "Idle_Max",
+              "loading": 0.23787470161914825,
+              "abs_loading": 0.23787470161914825
+            }
+          ]
+        },
+        {
+          "component": 7,
+          "explained_variance_ratio": 0.01779540441930294,
+          "top_features": [
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.45316511392593384,
+              "abs_loading": 0.45316511392593384
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": -0.37227708101272583,
+              "abs_loading": 0.37227708101272583
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": -0.36317044496536255,
+              "abs_loading": 0.36317044496536255
+            },
+            {
+              "feature": "Idle_Mean",
+              "loading": -0.34773558378219604,
+              "abs_loading": 0.34773558378219604
+            },
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": -0.3361952006816864,
+              "abs_loading": 0.3361952006816864
+            }
+          ]
+        },
+        {
+          "component": 8,
+          "explained_variance_ratio": 0.014150784350931644,
+          "top_features": [
+            {
+              "feature": "Src_Port",
+              "loading": 0.5984296798706055,
+              "abs_loading": 0.5984296798706055
+            },
+            {
+              "feature": "Dst_Port",
+              "loading": 0.572897732257843,
+              "abs_loading": 0.572897732257843
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": -0.30889078974723816,
+              "abs_loading": 0.30889078974723816
+            },
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": 0.3075157701969147,
+              "abs_loading": 0.3075157701969147
+            },
+            {
+              "feature": "Cat",
+              "loading": -0.2837141454219818,
+              "abs_loading": 0.2837141454219818
+            }
+          ]
+        },
+        {
+          "component": 9,
+          "explained_variance_ratio": 0.008198115974664688,
+          "top_features": [
+            {
+              "feature": "Idle_Mean",
+              "loading": 0.45418301224708557,
+              "abs_loading": 0.45418301224708557
+            },
+            {
+              "feature": "Flow_Duration",
+              "loading": -0.3897559344768524,
+              "abs_loading": 0.3897559344768524
+            },
+            {
+              "feature": "Bwd_IAT_Tot",
+              "loading": -0.38834837079048157,
+              "abs_loading": 0.38834837079048157
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": -0.3674222230911255,
+              "abs_loading": 0.3674222230911255
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": 0.3389703333377838,
+              "abs_loading": 0.3389703333377838
+            }
+          ]
+        },
+        {
+          "component": 10,
+          "explained_variance_ratio": 0.00600251741707325,
+          "top_features": [
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": 0.521388590335846,
+              "abs_loading": 0.521388590335846
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": -0.4231756329536438,
+              "abs_loading": 0.4231756329536438
+            },
+            {
+              "feature": "Idle_Max",
+              "loading": 0.403996080160141,
+              "abs_loading": 0.403996080160141
+            },
+            {
+              "feature": "Flow_IAT_Mean",
+              "loading": -0.37176021933555603,
+              "abs_loading": 0.37176021933555603
+            },
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.23844826221466064,
+              "abs_loading": 0.23844826221466064
+            }
+          ]
+        }
+      ],
+      "train_shape": [
+        7000,
+        10
+      ],
+      "test_shape": [
+        3000,
+        10
+      ]
+    },
+    "split_first_fit_train_only": {
+      "selected_features": 20,
+      "selected_feature_names": [
+        "Src_Port",
+        "Dst_Port",
+        "Flow_Duration",
+        "TotLen_Bwd_Pkts",
+        "Bwd_Pkt_Len_Min",
+        "Flow_Pkts/s",
+        "Flow_IAT_Mean",
+        "Flow_IAT_Max",
+        "Bwd_Header_Len",
+        "Bwd_Pkts/s",
+        "Pkt_Len_Mean",
+        "Pkt_Size_Avg",
+        "Subflow_Bwd_Byts",
+        "Init_Bwd_Win_Byts",
+        "Idle_Mean",
+        "Idle_Max",
+        "Fwd_Bwd_Len_Ratio",
+        "Pkt_Rate",
+        "Cat",
+        "Sub_Cat"
+      ],
+      "pca_variance_retained": 0.9851314425468445,
+      "pca_component_summaries": [
+        {
+          "component": 1,
+          "explained_variance_ratio": 0.4430902302265167,
+          "top_features": [
+            {
+              "feature": "Flow_IAT_Max",
+              "loading": 0.3557788133621216,
+              "abs_loading": 0.3557788133621216
+            },
+            {
+              "feature": "Flow_IAT_Mean",
+              "loading": 0.35426485538482666,
+              "abs_loading": 0.35426485538482666
+            },
+            {
+              "feature": "Flow_Duration",
+              "loading": 0.34738752245903015,
+              "abs_loading": 0.34738752245903015
+            },
+            {
+              "feature": "Idle_Max",
+              "loading": 0.34258782863616943,
+              "abs_loading": 0.34258782863616943
+            },
+            {
+              "feature": "Idle_Mean",
+              "loading": 0.33857202529907227,
+              "abs_loading": 0.33857202529907227
+            }
+          ]
+        },
+        {
+          "component": 2,
+          "explained_variance_ratio": 0.3040120601654053,
+          "top_features": [
+            {
+              "feature": "Bwd_Pkt_Len_Min",
+              "loading": 0.46683982014656067,
+              "abs_loading": 0.46683982014656067
+            },
+            {
+              "feature": "Pkt_Len_Mean",
+              "loading": 0.46284934878349304,
+              "abs_loading": 0.46284934878349304
+            },
+            {
+              "feature": "Pkt_Size_Avg",
+              "loading": 0.43518292903900146,
+              "abs_loading": 0.43518292903900146
+            },
+            {
+              "feature": "Subflow_Bwd_Byts",
+              "loading": 0.3167493939399719,
+              "abs_loading": 0.3167493939399719
+            },
+            {
+              "feature": "TotLen_Bwd_Pkts",
+              "loading": 0.3167493939399719,
+              "abs_loading": 0.3167493939399719
+            }
+          ]
+        },
+        {
+          "component": 3,
+          "explained_variance_ratio": 0.07684557139873505,
+          "top_features": [
+            {
+              "feature": "Dst_Port",
+              "loading": 0.7273341417312622,
+              "abs_loading": 0.7273341417312622
+            },
+            {
+              "feature": "Src_Port",
+              "loading": -0.4221852719783783,
+              "abs_loading": 0.4221852719783783
+            },
+            {
+              "feature": "Cat",
+              "loading": 0.29434138536453247,
+              "abs_loading": 0.29434138536453247
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": 0.2937743365764618,
+              "abs_loading": 0.2937743365764618
+            },
+            {
+              "feature": "Subflow_Bwd_Byts",
+              "loading": -0.1641652137041092,
+              "abs_loading": 0.1641652137041092
+            }
+          ]
+        },
+        {
+          "component": 4,
+          "explained_variance_ratio": 0.05544675886631012,
+          "top_features": [
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": 0.7182915210723877,
+              "abs_loading": 0.7182915210723877
+            },
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.42910656332969666,
+              "abs_loading": 0.42910656332969666
+            },
+            {
+              "feature": "Cat",
+              "loading": 0.25962021946907043,
+              "abs_loading": 0.25962021946907043
+            },
+            {
+              "feature": "Dst_Port",
+              "loading": -0.2363283783197403,
+              "abs_loading": 0.2363283783197403
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": 0.21293707191944122,
+              "abs_loading": 0.21293707191944122
+            }
+          ]
+        },
+        {
+          "component": 5,
+          "explained_variance_ratio": 0.03381708636879921,
+          "top_features": [
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": 0.5991811156272888,
+              "abs_loading": 0.5991811156272888
+            },
+            {
+              "feature": "Src_Port",
+              "loading": -0.4513065814971924,
+              "abs_loading": 0.4513065814971924
+            },
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.42120683193206787,
+              "abs_loading": 0.42120683193206787
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": 0.2846332788467407,
+              "abs_loading": 0.2846332788467407
+            },
+            {
+              "feature": "Cat",
+              "loading": -0.21966028213500977,
+              "abs_loading": 0.21966028213500977
+            }
+          ]
+        },
+        {
+          "component": 6,
+          "explained_variance_ratio": 0.026383547112345695,
+          "top_features": [
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": 0.4655052423477173,
+              "abs_loading": 0.4655052423477173
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": -0.4101208448410034,
+              "abs_loading": 0.4101208448410034
+            },
+            {
+              "feature": "Src_Port",
+              "loading": -0.3301447927951813,
+              "abs_loading": 0.3301447927951813
+            },
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": -0.2983655333518982,
+              "abs_loading": 0.2983655333518982
+            },
+            {
+              "feature": "Cat",
+              "loading": -0.26598796248435974,
+              "abs_loading": 0.26598796248435974
+            }
+          ]
+        },
+        {
+          "component": 7,
+          "explained_variance_ratio": 0.019030384719371796,
+          "top_features": [
+            {
+              "feature": "Bwd_Header_Len",
+              "loading": 0.40869638323783875,
+              "abs_loading": 0.40869638323783875
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": -0.38725870847702026,
+              "abs_loading": 0.38725870847702026
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": -0.3865608870983124,
+              "abs_loading": 0.3865608870983124
+            },
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": -0.36156758666038513,
+              "abs_loading": 0.36156758666038513
+            },
+            {
+              "feature": "Idle_Mean",
+              "loading": -0.3136310279369354,
+              "abs_loading": 0.3136310279369354
+            }
+          ]
+        },
+        {
+          "component": 8,
+          "explained_variance_ratio": 0.013775560073554516,
+          "top_features": [
+            {
+              "feature": "Src_Port",
+              "loading": 0.5951098203659058,
+              "abs_loading": 0.5951098203659058
+            },
+            {
+              "feature": "Dst_Port",
+              "loading": 0.5830546617507935,
+              "abs_loading": 0.5830546617507935
+            },
+            {
+              "feature": "Sub_Cat",
+              "loading": -0.3399902582168579,
+              "abs_loading": 0.3399902582168579
+            },
+            {
+              "feature": "Cat",
+              "loading": -0.30424630641937256,
+              "abs_loading": 0.30424630641937256
+            },
+            {
+              "feature": "Init_Bwd_Win_Byts",
+              "loading": 0.27374517917633057,
+              "abs_loading": 0.27374517917633057
+            }
+          ]
+        },
+        {
+          "component": 9,
+          "explained_variance_ratio": 0.007138144224882126,
+          "top_features": [
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": 0.5417286157608032,
+              "abs_loading": 0.5417286157608032
+            },
+            {
+              "feature": "Flow_Duration",
+              "loading": 0.4739185869693756,
+              "abs_loading": 0.4739185869693756
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": -0.3939540386199951,
+              "abs_loading": 0.3939540386199951
+            },
+            {
+              "feature": "Idle_Mean",
+              "loading": -0.3580338954925537,
+              "abs_loading": 0.3580338954925537
+            },
+            {
+              "feature": "Flow_IAT_Max",
+              "loading": 0.20641085505485535,
+              "abs_loading": 0.20641085505485535
+            }
+          ]
+        },
+        {
+          "component": 10,
+          "explained_variance_ratio": 0.005592182278633118,
+          "top_features": [
+            {
+              "feature": "Idle_Max",
+              "loading": 0.4243774712085724,
+              "abs_loading": 0.4243774712085724
+            },
+            {
+              "feature": "Idle_Mean",
+              "loading": 0.39007067680358887,
+              "abs_loading": 0.39007067680358887
+            },
+            {
+              "feature": "Flow_IAT_Mean",
+              "loading": -0.37665075063705444,
+              "abs_loading": 0.37665075063705444
+            },
+            {
+              "feature": "Flow_Pkts/s",
+              "loading": 0.35613349080085754,
+              "abs_loading": 0.35613349080085754
+            },
+            {
+              "feature": "Bwd_Pkts/s",
+              "loading": -0.3391803205013275,
+              "abs_loading": 0.3391803205013275
+            }
+          ]
+        }
+      ],
+      "train_shape": [
+        7000,
+        10
+      ],
+      "test_shape": [
+        3000,
+        10
+      ]
+    }
+  },
+  "results": {
+    "logistic_regression": {
+      "accuracy": {
+        "full_fit_then_split": 0.9723333333333334,
+        "split_first_fit_train_only": 0.97,
+        "delta_full_minus_clean": 0.0023333333333334094
+      },
+      "f1_weighted": {
+        "full_fit_then_split": 0.9720275464620137,
+        "split_first_fit_train_only": 0.9694280570558094,
+        "delta_full_minus_clean": 0.0025994894062043583
+      },
+      "mcc": {
+        "full_fit_then_split": 0.8288236601299633,
+        "split_first_fit_train_only": 0.812054182062601,
+        "delta_full_minus_clean": 0.016769478067362287
+      },
+      "specificity": {
+        "full_fit_then_split": 0.9871700879765396,
+        "split_first_fit_train_only": 0.9875366568914956,
+        "delta_full_minus_clean": -0.0003665689149560114
+      }
+    },
+    "random_forest": {
+      "accuracy": {
+        "full_fit_then_split": 0.9953333333333333,
+        "split_first_fit_train_only": 0.996,
+        "delta_full_minus_clean": -0.0006666666666667043
+      },
+      "f1_weighted": {
+        "full_fit_then_split": 0.9952939067658293,
+        "split_first_fit_train_only": 0.9959592763914175,
+        "delta_full_minus_clean": -0.0006653696255881636
+      },
+      "mcc": {
+        "full_fit_then_split": 0.9714277167480373,
+        "split_first_fit_train_only": 0.9755490796827708,
+        "delta_full_minus_clean": -0.00412136293473353
+      },
+      "specificity": {
+        "full_fit_then_split": 0.999266862170088,
+        "split_first_fit_train_only": 1.0,
+        "delta_full_minus_clean": -0.0007331378299120228
+      }
+    }
+  }
+}

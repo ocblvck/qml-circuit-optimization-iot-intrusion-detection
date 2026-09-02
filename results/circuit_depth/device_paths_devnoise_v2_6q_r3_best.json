@@ -1,0 +1,23 @@
+{
+  "num_qubits": 6,
+  "zz_reps": 3,
+  "path_policy": "best",
+  "paths": {
+    "FakeKolkataV2": [
+      18,
+      21,
+      23,
+      24,
+      25,
+      26
+    ],
+    "FakeSherbrooke": [
+      58,
+      59,
+      60,
+      61,
+      62,
+      72
+    ]
+  }
+}

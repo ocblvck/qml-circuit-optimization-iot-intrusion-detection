@@ -1,13 +1,43 @@
-numpy>=1.24
-pandas>=2.0
-scipy>=1.10
-scikit-learn>=1.3
-matplotlib>=3.8
+# Exact environment used to produce every result in the paper.
+# Captured from the execution environment: Python 3.11.13, Linux x86_64,
+# 3x NVIDIA RTX A6000 (48 GB), CUDA 12.
+#
+# Versions are pinned with == so that a third party reproduces the same
+# software stack. These match the versions quoted in the manuscript.
+#
+#   conda create -n qiskit python=3.11.13
+#   conda activate qiskit
+#   pip install -r requirements.txt --extra-index-url https://pypi.nvidia.com
+#
+# CPU-ONLY MACHINES: replace qiskit-aer-gpu with qiskit-aer==0.15.1 and remove
+# cupy-cuda12x and cuml-cu12. Ideal-simulation experiments and the whole
+# statistical reanalysis still run; the noisy density-matrix sweeps become
+# impractically slow (the Phase-4 tiers took roughly 3,400 GPU-hours).
 
-qiskit>=1.0
-qiskit-aer>=0.14
-qiskit-machine-learning>=0.7
-qiskit-algorithms>=0.3
+# --- quantum stack ---
+qiskit==1.4.4
+qiskit-aer-gpu==0.15.1
+qiskit-ibm-runtime==0.42.0
+qiskit-machine-learning==0.8.4
+qiskit-algorithms==0.4.0
 
-# Install a CUDA-matched CuPy build separately.
-# Install RAPIDS cuML in a way that matches your CUDA version and platform.
+# --- alternative compilers (supporting analysis, Appendix D) ---
+pyzx==0.9.0
+pytket==2.12.0
+
+# --- scientific stack ---
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.7.2
+networkx==3.3
+joblib==1.5.2
+tqdm==4.67.1
+
+# --- GPU acceleration (CUDA 12; see note above) ---
+cupy-cuda12x==13.6.0
+cuml-cu12==26.2.0
+
+# --- figures ---
+matplotlib==3.10.6
+seaborn==0.13.2

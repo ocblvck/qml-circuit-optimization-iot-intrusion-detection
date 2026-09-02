@@ -1,0 +1,79 @@
+{
+  "dataset": "IoT_Original_Distribution.csv",
+  "sample_size": 5000,
+  "num_qubits": 10,
+  "test_size": 0.3,
+  "seed": 42,
+  "protocols": {
+    "full_fit_then_split": {
+      "selected_features": 20,
+      "pca_variance_retained": 0.9876182079315186,
+      "train_shape": [
+        3500,
+        10
+      ],
+      "test_shape": [
+        1500,
+        10
+      ]
+    },
+    "split_first_fit_train_only": {
+      "selected_features": 20,
+      "pca_variance_retained": 0.985590398311615,
+      "train_shape": [
+        3500,
+        10
+      ],
+      "test_shape": [
+        1500,
+        10
+      ]
+    }
+  },
+  "results": {
+    "logistic_regression": {
+      "accuracy": {
+        "full_fit_then_split": 0.968,
+        "split_first_fit_train_only": 0.97,
+        "delta_full_minus_clean": -0.0020000000000000018
+      },
+      "f1_weighted": {
+        "full_fit_then_split": 0.967239825973126,
+        "split_first_fit_train_only": 0.9692332103066469,
+        "delta_full_minus_clean": -0.00199338433352092
+      },
+      "mcc": {
+        "full_fit_then_split": 0.8033857020645029,
+        "split_first_fit_train_only": 0.8153652394136036,
+        "delta_full_minus_clean": -0.011979537349100733
+      },
+      "specificity": {
+        "full_fit_then_split": 0.9875,
+        "split_first_fit_train_only": 0.9889705882352942,
+        "delta_full_minus_clean": -0.0014705882352941124
+      }
+    },
+    "random_forest": {
+      "accuracy": {
+        "full_fit_then_split": 0.9913333333333333,
+        "split_first_fit_train_only": 0.9913333333333333,
+        "delta_full_minus_clean": 0.0
+      },
+      "f1_weighted": {
+        "full_fit_then_split": 0.9911429593359562,
+        "split_first_fit_train_only": 0.9911429593359562,
+        "delta_full_minus_clean": 0.0
+      },
+      "mcc": {
+        "full_fit_then_split": 0.9479207458989758,
+        "split_first_fit_train_only": 0.9479207458989758,
+        "delta_full_minus_clean": 0.0
+      },
+      "specificity": {
+        "full_fit_then_split": 1.0,
+        "split_first_fit_train_only": 1.0,
+        "delta_full_minus_clean": 0.0
+      }
+    }
+  }
+}
