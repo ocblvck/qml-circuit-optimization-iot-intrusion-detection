@@ -82,10 +82,10 @@ Every derived file is regenerable from the raw files using the scripts below.
 | Table 20 — regularization sweep | `qsvc_ctuning_experiment.py` |
 | Appendix C — preprocessing-order audit | `preprocessing_leakage_check.py` |
 | Shot-convergence check (Sec. IV-F) | `shot_sensitivity_experiment.py` |
-| Figure 2 — trade-off summary | `figures_src/generate_tradeoff_figure.py` |
-| Figures 3, 8, 9 | `figures_src/generate_missing_figures.py` |
-| Figures 4–7, 10, 11 | `figures_src/generate_enhancement_figures.py` |
-| Revision figures | `figures_src/generate_revision_figures.py` |
+| `tradeoff_summary.png` | `figures_src/generate_tradeoff_figure.py` |
+| `iot_6q_noise_response.png`, `unsw_6q_noise_response.png`, `tenq_accuracy_runtime_tradeoff.png` | `figures_src/generate_missing_figures.py` |
+| `unsw_nb15_6q_noise_response.png`, `unsw_nb15_heatmap_delta.png`, `device_noise_validation.png` | `figures_src/generate_revision_figures.py` |
+| `heatmap_accuracy_delta.png`, `cohens_d_effect_size.png`, `boxplot_accuracy_distributions.png`, `circuit_metrics_comparison.png` | `figures_src/generate_enhancement_figures.py` |
 
 ### Fastest independent check
 
@@ -105,10 +105,15 @@ exponential concentration fits.
 Figures are regenerated with:
 
 ```bash
-python figures_src/generate_tradeoff_figure.py     # writes figures_src/figures/
+# run all four; together they produce the 11 figures in the paper
+python figures_src/generate_tradeoff_figure.py      # writes figures_src/figures/
 python figures_src/generate_missing_figures.py
+python figures_src/generate_revision_figures.py
 python figures_src/generate_enhancement_figures.py
 ```
+
+Expect exactly 11 PNGs in `figures_src/figures/`; verify with
+`ls figures_src/figures/*.png | wc -l`.
 
 ## 6. Hardware provenance
 
