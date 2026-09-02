@@ -21,7 +21,8 @@ and figure in the paper.
 ```bash
 git clone https://github.com/ocblvck/qml-circuit-optimization-iot-intrusion-detection.git
 cd qml-circuit-optimization-iot-intrusion-detection
-git lfs install && git lfs pull          # datasets are stored with Git LFS
+git lfs install && git lfs pull          # fetches the one dataset shipped here
+python data/get_datasets.py             # shows how to obtain the other two, and verifies all three
 
 conda create -n qiskit python=3.11.13
 conda activate qiskit
@@ -137,14 +138,26 @@ Heron-class device.
 
 ## Datasets
 
-- `data/IoT_Original_Distribution.csv` (IoTID20, after the wrangling in Sec. III-B)
-- `data/UNSW_2018_IoT_Botnet_Final_10_Best.csv` (Bot-IoT, "Final 10 Best")
-- `data/UNSW_NB15.csv` (UNSW-NB15)
+| File | Shipped here | How to obtain |
+|---|---|---|
+| `data/IoT_Original_Distribution.csv` | **Yes** (Git LFS) | `git lfs pull` |
+| `data/UNSW_2018_IoT_Botnet_Final_10_Best.csv` | No | Download from UNSW |
+| `data/UNSW_NB15.csv` | No | Download the two partitions from UNSW, then `--build` |
 
-Stored with Git LFS; run `git lfs pull` after cloning. Each dataset is the property of
-its original authors and carries its own academic-use licence and required citation, all
-recorded in `data/README.md`. The repository `LICENSE` (MIT) covers the code and derived
-results only.
+Only the IoTID20-derived file is redistributed. It is a *derived* artifact of this
+project's wrangling pipeline that cannot be reconstructed without it, and IoTID20's
+licence is the least restrictive of the three. The two UNSW datasets grant academic use
+but do not explicitly grant redistribution, so they are downloaded from source instead:
+
+```bash
+python data/get_datasets.py            # status, download instructions, verification
+python data/get_datasets.py --build    # rebuild UNSW_NB15.csv from its two partitions
+```
+
+The rebuild reproduces the published file byte-for-byte, and the script verifies every
+dataset against the SHA-256 of the exact copy used for the reported results. Each dataset
+carries its own licence and required citation, recorded in `data/README.md`. The
+repository `LICENSE` (MIT) covers the code and derived results only.
 
 Scripts accept either `data/x.csv` or a bare `x.csv`; paths resolve relative to the
 repository root, so the scripts work from any working directory.

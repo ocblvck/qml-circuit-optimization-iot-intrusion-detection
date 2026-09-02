@@ -25,13 +25,21 @@ Heron-class device.
 
 ## 2. Data
 
-The three datasets ship in `data/` via Git LFS. **Read `data/README.md` first** — it
-records each dataset's source, verbatim licence, required citation, and the
-prevalence caveat that governs how UNSW-2018 numbers may be interpreted.
+Only the IoTID20-derived file ships in `data/` (via Git LFS). The two UNSW datasets are
+downloaded from source, because their licences grant academic use but not redistribution.
+**Read `data/README.md` first** — it records each dataset's source, verbatim licence,
+required citation, and the prevalence caveat that governs how UNSW-2018 numbers may be
+interpreted.
 
 ```bash
-git lfs install && git lfs pull
+git lfs install && git lfs pull         # fetches the shipped dataset
+python data/get_datasets.py             # status + download instructions + verification
+python data/get_datasets.py --build     # rebuild UNSW_NB15.csv from its two partitions
 ```
+
+The `--build` recipe (training partition then testing partition, written without an index
+column) was verified to reproduce the published file byte-for-byte, and the script checks
+every dataset against the SHA-256 of the copy used for the reported results.
 
 ## 3. Random seeds
 

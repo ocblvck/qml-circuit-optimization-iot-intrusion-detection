@@ -43,3 +43,10 @@ paper/*.synctex.gz
 results/circuit_depth/figures/
 # generated figures (regenerate with figures_src/generate_*.py)
 figures_src/figures/
+
+# Third-party datasets not redistributed here (see data/README.md for licences).
+# Obtain them from their official sources; data/get_datasets.py verifies them.
+data/UNSW_2018_IoT_Botnet_Final_10_Best.csv
+data/UNSW_NB15.csv
+data/UNSW_NB15_training-set.csv
+data/UNSW_NB15_testing-set.csv

@@ -7512,8 +7512,10 @@ def main():
             datasets.append((name, resolved))
         else:
             logger.warning(
-                f"Dataset not found: {ds} (expected in data/; "
-                f"run 'git lfs pull' if it is a Git LFS pointer)")
+                f"Dataset not found: {ds}. Run 'python data/get_datasets.py' for "
+                f"status and download instructions (the two UNSW datasets are not "
+                f"redistributed and must be obtained from UNSW; the shipped dataset "
+                f"needs 'git lfs pull').")
     
     if not datasets:
         logger.error("No valid datasets found!")

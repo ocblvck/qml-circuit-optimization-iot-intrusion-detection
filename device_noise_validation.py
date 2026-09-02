@@ -179,8 +179,10 @@ def resolve_dataset_path(dataset_path: str) -> str:
         if os.path.isfile(cand):
             return cand
     raise FileNotFoundError(
-        f"Dataset not found: {dataset_path}. Expected it in data/ "
-        f"(run 'git lfs pull' if the file is a Git LFS pointer)."
+        f"Dataset not found: {dataset_path}. Run 'python data/get_datasets.py' for "
+        f"status and download instructions. The two UNSW datasets are not "
+        f"redistributed here and must be obtained from UNSW; the shipped dataset "
+        f"needs 'git lfs pull'."
     )
 
 
